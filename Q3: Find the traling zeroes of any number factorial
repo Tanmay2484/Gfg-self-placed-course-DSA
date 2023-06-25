@@ -1,0 +1,32 @@
+// Find the traling zeroes of any number factorial
+for example 5 the fact is 120 so trailing zeroes is 1
+formula: trailing Zeroes = floor(n/5)+floor(n/25)+floor(n/125)+..................
+nummber of 5 is the number of trailing zeroes(ans)
+c++ code
+#include <bits/stdc++.h>
+using namespace std;
+int trailingzero(int n){
+   int count=0;
+   for(int i=5;i<=n;i*=5){
+     count+=n/i;
+   }
+   return count;
+}
+int main() {
+    int n;
+    cin>>n;
+    cout<<trailingzero(n);
+}
+Java
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        int n,count=0;
+        Scanner sc=new Scanner(System.in);
+         n=sc.nextInt();
+        for(int i=5;i<=n;i*=5){
+            count+=n/i;
+        }
+        System.out.println(count);
+    }
+}
