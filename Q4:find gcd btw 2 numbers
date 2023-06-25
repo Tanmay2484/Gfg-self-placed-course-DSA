@@ -1,4 +1,4 @@
-find gcd of any number
+find gcd btw 2 numbers
 c++
 #include <bits/stdc++.h>
 using namespace std;
