@@ -31,3 +31,22 @@ public class Main {
        
     }
 }
+Java
+import java.util.*;
+public class Main {
+    public int gcd(int a,int b){// we didn't use static because we have created  object of gcd function
+        if(b==0) return a;
+
+        return gcd(b,a%b);
+    }
+    public static void main(String args[]) {
+        int a,b;
+        Scanner sc=new Scanner(System.in);
+         a=sc.nextInt();
+         b=sc.nextInt();
+         Main ob=new Main();
+         int ans=ob.gcd(a,b);
+        System.out.println(ans);
+       
+    }
+}
