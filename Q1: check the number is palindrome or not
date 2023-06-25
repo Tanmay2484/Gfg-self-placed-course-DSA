@@ -1,0 +1,36 @@
+//check the number is palindrome or not
+c++
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n,rev=0,temp;
+    cin>>n;
+    temp=n;
+    while(n!=0){
+        rev=rev*10+n%10;
+        n/=10;
+    }
+     if(rev==temp)
+            cout<<("This number is a palindrome");
+         else
+            cout<<("This number is not a palindrome");
+}
+
+java
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        int n,rev=0,temp;
+        Scanner sc=new Scanner(System.in);
+         n=sc.nextInt();
+         temp=n;
+         while(n!=0){
+             rev=rev*10+n%10;
+             n/=10;
+         }
+         if(rev==temp)
+            System.out.println("This number is a palindrome");
+         else
+            System.out.println("This number is not a palindrome");
+    }
+}
